@@ -8,9 +8,10 @@ import { ActivatedRoute } from '@angular/router';
   templateUrl: './cursos.component.html',
   styleUrls: ['./cursos.component.css']
 })
-export class CursosComponent {
+export class CursosComponent implements OnInit{
 
   cursos: cursos[];
+  alumnos: any[];
 
   constructor(private service: CursosService, private activatedRoute: ActivatedRoute) {
     this.cursos = [];
