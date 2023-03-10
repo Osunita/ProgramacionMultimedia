@@ -4,7 +4,7 @@ import { CursosService } from '../cursos.service';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
-  selector: 'app-cursos',
+  selector: 'app-cursosLista',
   templateUrl: './cursosLista.component.html',
   styleUrls: ['./cursosLista.component.css']
 })

@@ -7,7 +7,7 @@ import { Alumno } from '../Alumno/IAlumno';
 
 @Component({
   selector: 'app-cursos',
-  templateUrl: './cursos.component.html',
+  templateUrl: 'cursos.component.html',
   styleUrls: ['./cursos.component.css']
 })
 export class CursosComponent implements OnInit{
