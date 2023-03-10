@@ -14,15 +14,16 @@ import { ProfesorComponent } from './Profesor/Profesor.component';
 import { CarrerasComponent } from './carreras/carreras.component';
 import { ProfesoresCarrerasComponent } from './Profesor/ProfesoresCarreras/ProfesoresCarreras.component';
 import { CursosComponent } from './cursos/cursos.component';
+import { CursosListaComponent } from './cursos/cursosLista/cursosLista.component';
 
 const appRutas: Routes = [
   { path: 'Alumno', component: AlumnoListaComponent},
   { path: 'Alumno/:ID', component: AlumnoComponent},
   { path: 'Profesor', component: ProfesorComponent},
   { path: 'carrera', component: CarrerasComponent},
-  { path: 'curso', component: CursosComponent},
   { path: '', redirectTo: 'Alumno', pathMatch: 'full'},
-  { path: 'Profesor/:carrerasID', component: ProfesoresCarrerasComponent}
+  { path: 'Profesor/:carrerasID', component: ProfesoresCarrerasComponent},
+  { path: 'curso', component: CursosComponent}
 ]
 
 @NgModule({
@@ -35,7 +36,8 @@ const appRutas: Routes = [
     ProfesorComponent,
     CarrerasComponent,
     ProfesoresCarrerasComponent,
-    CursosComponent
+    CursosComponent,
+    CursosListaComponent
   ],
   imports: [
     BrowserModule,

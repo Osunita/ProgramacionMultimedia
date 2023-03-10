@@ -16,7 +16,8 @@ export class Alumno implements IAlumno{
      public Apellidos: string,
      public Direccion: string,
      public fnac: string,
-     public sexo: string){
+     public sexo: string,
+     public cursoID: number){
   }
 
 }

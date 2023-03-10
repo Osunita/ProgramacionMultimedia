@@ -17,11 +17,4 @@ export class CursosService {
     return this._http.get<cursos[]>("https://localhost:44393/api/Curso");
   }
 
-  getCursoById(id: number) {
-    return this._http.get(`${this.apiUrl}/curso/${id}`);
-  }
-
-  getAlumnosByCurso(cursoId: number) {
-    return this._http.get(`${this.apiUrl}/curso/${cursoId}/alumnos`);
-  }
 }

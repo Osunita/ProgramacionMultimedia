@@ -1,3 +1,9 @@
-<p>
-  cursosLista works!
-</p>
+<form name="formulario" method="post" action="http://pagina.com/send.php">
+  <!-- Lista de selección -->
+  <h1>Elige el curso:</h1>
+  <select [(ngModel)]="elegido" (change)="cursoSeleccionado()">
+
+      <option *ngFor="let curso of cursos" [value]="curso.id">{{curso.nomCurso}}</option>
+
+  </select>
+</form>

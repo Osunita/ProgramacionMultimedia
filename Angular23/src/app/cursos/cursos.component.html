@@ -1,28 +1,26 @@
-
-<form name="formulario" method="post" action="http://pagina.com/send.php">
-  <!-- Lista de selección -->
-  <h1>Elige el curso:</h1>
-  <select >
-
-      <option *ngFor="let curso of cursos"><a [routerLink]="['/cursos', curso.id]">{{curso.nomCurso}}</a></option>
-
-  </select>
-</form>
-
-
-
-<!--
+<app-cursosLista (cursoSelec)="CursoLista($event)"></app-cursosLista>
 <table>
   <thead>
     <tr>
-
-
+      <th>Nombre</th>
+      <th>Apellido</th>
+      <th>Direccion</th>
+      <th>Fecha de Nacimiento</th>
+      <th>Sexo</th>
+    </tr>
+    <ng-container *ngFor='let alumno of alumnos'>
+      <tr>
+        <td>{{alumno.Nombre}}</td>
+        <td>{{alumno.Apellidos}}</td>
+        <td>{{alumno.Direccion}}</td>
+        <td>{{alumno.fnac}}</td>
+        <td>{{alumno.sexo}}</td>
+      </tr>
+    </ng-container>
+    <tr *ngIf='alumnos.length == 0'>
+      <td colspan="4">No hay alumnos</td>
     </tr>
   </thead>
-  <tr *ngFor="let curso of cursos">
-      <td><a [routerLink]="['/cursos', curso.id]">{{curso.nomCurso}}</a></td>
-  </tr>
-
 </table>
-<br>
--->
+
+
