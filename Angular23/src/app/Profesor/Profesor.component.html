@@ -1,0 +1,20 @@
+<table>
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Apellidos</th>
+      <th>Fecha ing.</th>
+      <th>Titulación</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr *ngFor='let profesor of profesores'>
+        <td>{{profesor.Nombre }}</td>
+        <td>{{profesor.Apellidos }}</td>
+        <td>{{profesor.fingreso }}</td>
+        <ng-container *ngFor='let carrera of carreras'>
+          <td *ngIf='profesor.carrerasID == carrera.id'>{{carrera.titulo}}</td>
+        </ng-container>
+      </tr>
+  </tbody>
+</table>

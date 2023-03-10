@@ -1,0 +1,16 @@
+<table>
+  <thead>
+    <tr>
+
+
+    </tr>
+  </thead>
+  <th>Nombre</th>
+  <tr *ngFor="let carrera of carreras">
+      <td><a [routerLink]="['/Profesor', carrera.id]">{{carrera.titulo}}</a></td>
+  </tr>
+
+</table>
+<br>
+
+
