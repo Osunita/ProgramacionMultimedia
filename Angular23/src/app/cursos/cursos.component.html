@@ -2,10 +2,10 @@
 <form name="formulario" method="post" action="http://pagina.com/send.php">
   <!-- Lista de selección -->
   <h1>Elige el curso:</h1>
-  <select name="curso">
-    <ng-container *ngFor="let curso of cursos">
-      <option value="1"><a [routerLink]="['/cursos', curso.id]">{{curso.nomCurso}}</a></option>
-    </ng-container>
+  <select >
+
+      <option *ngFor="let curso of cursos"><a [routerLink]="['/cursos', curso.id]">{{curso.nomCurso}}</a></option>
+
   </select>
 </form>
 

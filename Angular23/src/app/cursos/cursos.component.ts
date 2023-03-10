@@ -17,7 +17,9 @@ export class CursosComponent {
 
   }
   ngOnInit() {
+    let idCurso = this.activatedRoute.snapshot.params['id'];
     this.service.getCursos().subscribe((datoscursos) => this.cursos = datoscursos);
+
   }
 
 }
